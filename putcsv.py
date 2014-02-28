@@ -26,7 +26,7 @@ with con:
         row = cur.fetchone()
         rows = row
         
-        #直接输出id、课程名称、图片地址三个元素
+        
         #print row[0], row[1],row[2]
         #print rows
         
