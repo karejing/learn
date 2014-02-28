@@ -14,7 +14,7 @@ with con:
     cur = con.cursor()
 
     #执行那个查询，这里用的是select语句
-    cur.execute("select id,name,pic from test")
+    cur.execute("select 1,2,3 from test")
 
     #使用cur.rowcount获取结果集的条数
     numrows = int(cur.rowcount)
@@ -34,5 +34,5 @@ with con:
 with open('eggs.csv', 'wb') as csvfile:
     #spamwriter = csv.writer(csvfile, delimiter=' ',quotechar='|', quoting=csv.QUOTE_MINIMAL)
     spamwriter = csv.writer(csvfile, dialect='excel')
-    spamwriter.writerow(['ID'] + ['课程名称'] + ['图片地址'])
+    spamwriter.writerow(['1'] + ['2'] + ['3'])
     spamwriter.writerow(rows)
