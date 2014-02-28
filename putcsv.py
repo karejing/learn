@@ -34,5 +34,6 @@ with con:
 with open('eggs.csv', 'wb') as csvfile:
     #spamwriter = csv.writer(csvfile, delimiter=' ',quotechar='|', quoting=csv.QUOTE_MINIMAL)
     spamwriter = csv.writer(csvfile, dialect='excel')
+    #定义csv表头信息 
     spamwriter.writerow(['1'] + ['2'] + ['3'])
     spamwriter.writerow(rows)
